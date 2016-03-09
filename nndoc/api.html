@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>后台首页</title>
+    <!-- zui -->
+    <link href="css/zui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/zui-theme.css">
+    <link rel="stylesheet" href="css/gcode.css">
+    <!--[if lt IE 9]>
+    <script src="lib/ieonly/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="lib/ieonly/respond.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="lib/ieonly/excanvas.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="js/editor.md/css/editormd.preview.min.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+    <!-- 导航头部 -->
+    <div class="navbar-header">
+        <!-- 移动设备上的导航切换按钮 -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-example">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <!-- 品牌名称或logo -->
+        <a class="navbar-brand" href="#">手机api</a>
+    </div>
+
+    <!-- 导航项目 -->
+    <div class="collapse navbar-collapse navbar-collapse-example">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">添加 <b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">接口文档</a></li>
+                    <li><a href="#">结构体</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="your/nice/url">首页</a></li></ul>
+    </div>
+    </div>
+</nav>
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <nav class="menu" data-toggle="menu" style="padding-left: 10px;">
+                    <ul class="nav nav-primary">
+                        <li class="active show nav-parent">
+                            <a href="javascript:;">接口文档<i class="icon-chevron-right nav-parent-fold-icon"></i><i class="icon-chevron-right nav-parent-fold-icon"></i></a>
+                            <ul class="nav">
+                                <li><a href="javascript:;"><i class="icon-caret-right"></i> Ready</a></li>
+                                <li class="active"><a href="javascript:;"><i class="icon-caret-right"></i> Ongoing</a></li>
+                                <li><a href="javascript:;"><i class="icon-caret-right"></i> Completed</a></li>
+                            </ul>
+                        </li>
+                        <li class="active show nav-parent">
+                            <a href="javascript:;">结构体<i class="icon-chevron-right nav-parent-fold-icon"></i><i class="icon-chevron-right nav-parent-fold-icon"></i></a>
+                            <ul class="nav">
+                                <li><a href="javascript:;"><i class="icon-caret-right"></i> Ready</a></li>
+                                <li><a href="javascript:;"><i class="icon-caret-right"></i> Ongoing</a></li>
+                                <li><a href="javascript:;"><i class="icon-caret-right"></i> Completed</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-10">
+                        <div >
+                            <article class="article article-condensed" onclick="padding">
+                                <header>
+                                    <h1 class="text-center">文章标题</h1>
+                                    <dl class="dl-inline">
+                                        <dt>发布时间：</dt>
+                                        <dd>2013-11-07 17:14:22</dd>
+                                        <dt>最后处理人：</dt>
+                                        <dd>Catouse</dd>
+                                    </dl>
+
+                                </header>
+                                <section class="article-content" >
+                                    <div id="editormd-view">
+                                         <textarea style="display:none;">
+**简要描述：**
+
+- 用户注册接口
+**请求URL：**
+- ` http://xx.com/api/user/register `
+
+**请求方式：**
+- POST
+
+**参数：**
+
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|username |是  |string |用户名   |
+|password |是  |string | 密码    |
+|name     |否  |string | 昵称    |
+
+**返回示例**
+
+```
+{
+"error_code": 0,
+"data": {
+"uid": "1",
+"username": "12154545",
+"name": "吴系挂",
+"groupid": 2 ,
+"reg_time": "1436864169",
+"last_login_time": "0",
+}
+}
+```
+
+**返回参数说明**
+
+|参数名|类型|说明|
+|:-----  |:-----|-----                           |
+|groupid |int   |用户组id，1：超级管理员；2：普通用户  |
+
+**备注**
+                                             </textarea>
+                                        </div>
+                                </section>
+                            </article>
+                        </div>
+
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<footer class="navbar navbar-fixed-bottom" style="margin-top: 30px;margin-left: 50px;">
+    <div class="copyright">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center with-padding">
+                    <span>Copyright &copy; <a href="http://www.golaravel.com/">design by peter.wang</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="lib/jquery/jquery.js"></script>
+<!-- ZUI Javascript组件 -->
+<script src="js/zui.min.js"></script>
+</body>
+</html>
